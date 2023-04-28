@@ -1,28 +1,21 @@
-# Create T3 App
+# ▶️ Arcplay
+### Arcplay is a free and open source AI tool that takes a YouTube video link as input and generates an article accordingly.
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+## 🪄 How Arcplay works
 
-## What's next? How do I make an app with this?
+Arcplay has various AI integrations that allow user to create an article tailor-made to the provided video.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+The process starts when the user enteres the link to a YouTube video, that link is then parsed in the OpenAI WhisperAI API, which returns a transcript of the whole video. Once accepting that transcript, the entire text is prompted to the CohereAI API along with a prmopt to turn this transcript into an article.
+Once that article is returned, each paragraph from that article is then prompted to DALL-E AI for image generation.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Once the entire image set is received, the user will be presented a UI with the results (article & images) mapped accordingly.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+![How Arcplay works](./architecture.png)
 
-## Learn More
+## ⚙️ Tech Stack
+**Server-Side Rendered:** T3: Next.JS, TailwindCSS, TypeScript
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## 🏔️ Upcoming features
+- Ability to edit the article and images after being generated.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## ⚠️ Current bugs
