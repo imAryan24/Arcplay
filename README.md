@@ -1,3 +1,4 @@
+![Arcplay](/public/logo_big.png)
 # ▶️ Arcplay
 ### Arcplay is a free and open source AI tool that takes a YouTube video link as input and generates an article accordingly.
 
